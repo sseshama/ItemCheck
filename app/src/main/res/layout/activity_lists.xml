@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ListsActivity"
+    android:background="#ff3ba8ff">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout"
+        android:background="#ffffffff">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/addListText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="@string/add_new_list_hint"
+            android:background="#63ffffff"
+            android:layout_toLeftOf="@+id/add_list_Button"
+            android:layout_toStartOf="@+id/add_list_Button"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/add_list_Button"
+            android:layout_alignTop="@+id/add_list_Button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/add"
+            android:id="@+id/add_list_Button"
+            android:onClick="onAddButtonClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:background="#ffffffff"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="1dp"
+        android:divider="#ff567cf7"
+        />
+
+</RelativeLayout>
