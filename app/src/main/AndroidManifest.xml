@@ -4,21 +4,32 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/lists_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".ListsActivity"
             android:label="@string/app_name" >
+
+
+        </activity>
+        <activity
+            android:name=".ItemsActivity"
+            android:label="@string/title_activity_items" >
+        </activity>
+        <activity
+            android:name=".BuiltInListsActivity"
+            android:label="@string/title_activity_built_in_lists" >
+        </activity>
+        <activity
+            android:name=".Splash_Screen"
+            android:label="@string/app_name">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ItemsActivity"
-            android:label="@string/title_activity_items" >
         </activity>
     </application>
 

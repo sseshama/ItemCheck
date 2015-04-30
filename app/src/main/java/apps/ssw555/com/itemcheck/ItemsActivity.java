@@ -31,14 +31,7 @@ public class ItemsActivity extends ActionBarActivity {
         addItemButton = (Button)findViewById(R.id.add_item_button);
 
         listName = getIntent().getStringExtra(String.valueOf(R.string.ListName));
-
-        if (listName.equals(getResources().getString(R.string.Favorites)))
-            items = ListsAndItems.getFavorites();
-        else if (listName.equals(getResources().getString(R.string.Completed)))
-            items = ListsAndItems.getCompleted();
-        else
-            items = ListsAndItems.getListUsingKey(listName);
-
+        items = ListsAndItems.getListUsingKey(listName);
 
         addItemEditText = (EditText)findViewById(R.id.item_edit_Text);
         addItemEditText.clearFocus();

@@ -16,6 +16,7 @@ public class ListsAndItems {
 
     private static HashMap<String, ArrayList<String>> listsAndItems;
 
+
     private static ArrayList<String> favorites;
     private static ArrayList<String> completed;
 

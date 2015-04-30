@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.PrintWriter;
@@ -33,6 +34,8 @@ public class ListsActivity extends ActionBarActivity {
     ListView listView;
     ArrayAdapter<String> adapter;
     ArrayList<String> lists;
+    TextView completed;
+    TextView favorites;
 
 
     @Override
@@ -43,10 +46,11 @@ public class ListsActivity extends ActionBarActivity {
         addList = (EditText) findViewById(R.id.addListText);
         addButton = (Button) findViewById(R.id.add_list_Button);
         listView = (ListView) findViewById(R.id.listView);
+        completed = (TextView) findViewById(R.id.Completed);
+        favorites = (TextView) findViewById(R.id.Favorites);
 
         lists = new ArrayList<String>();
-        lists.add(getResources().getString(R.string.Completed));
-        lists.add(getResources().getString(R.string.Favorites));
+
         ListsAndItems.InitializeFromInputFile(getApplicationContext());
 
         for (String key : ListsAndItems.getListsAndItems().keySet())
@@ -73,7 +77,18 @@ public class ListsActivity extends ActionBarActivity {
                 startActivity(itemsIntent);
             }
         });
+
+
     }
+
+    public void onTextViewClick (View v) {
+        Intent builtInListItemsIntent = new Intent(getApplicationContext(), BuiltInListsActivity.class);
+        TextView view = (TextView)v;
+        String listName = view.getText().toString();
+        builtInListItemsIntent.putExtra(String.valueOf(R.string.BuiltInListName), listName);
+        startActivity(builtInListItemsIntent);
+    }
+
 
     @Override
     protected void onDestroy() {

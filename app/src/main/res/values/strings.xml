@@ -17,4 +17,7 @@
     <string name="Rename">Rename</string>
     <string name="Completed">Completed</string>
     <string name="EmailList">Email List</string>
+    <string name="title_activity_built_in_lists">BuiltInLists</string>
+    <string name="BuiltInListName">Built In List Name</string>
+    <string name="title_activity_splash__screen">Splash_Screen</string>
 </resources>

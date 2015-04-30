@@ -43,7 +43,43 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Completed"
+        android:text="@string/Completed"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="1dp"
+        android:divider="#ff567cf7"
+        android:background="#ffffffff"
+        android:singleLine="false"
 
+        android:textColor="#f9000000"
+        android:onClick="onTextViewClick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Favorites"
+        android:text="@string/Favorites"
+        android:textSize="18dp"
+
+        android:gravity="center_vertical"
+        android:layout_below="@+id/Completed"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:dividerHeight="1dp"
+        android:divider="#ff567cf7"
+        android:background="#ffffffff"
+
+        android:textColor="#f9000000"
+        android:onClick="onTextViewClick" />
 
 
     <ListView
@@ -53,7 +89,7 @@
         android:background="#ffffffff"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/relativeLayout"
+        android:layout_below="@+id/Favorites"
         android:layout_marginTop="10dp"
         android:dividerHeight="1dp"
         android:divider="#ff567cf7"
